@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?</title>
+    <style>
+      @media only screen and (max-width: 412px) {
+        * {
+          padding: 0%;
+          margin: 0%;
+        }
+
+        body {
+          background-color: #000000;
+          overflow: hidden;
+        }
+
+        p {
+          color: white;
+          font-family: sans-serif;
+          font-weight: 600;
+          position: absolute;
+          top: 36%;
+          left: 70px;
+          transform: translateY(150px);
+          opacity: 0;
+          transition: all 1s ease;
+        }
+
+        button {
+          width: 100px;
+          height: 35px;
+          border-radius: 25px;
+          font-family: sans-serif;
+          position: relative;
+          top: 370px;
+          left: 100px;
+        }
+      }
+
+      .No {
+        background-color: transparent;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 600;
+        border: 2px solid white;
+        transform: translateY(150px);
+        opacity: 0;
+        cursor: pointer;
+        transition: all 1s ease;
+      }
+
+      .Yes {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-family: sans-serif;
+        font-weight: 600;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 1s ease;
+        cursor: pointer;
+      }
+
+      .opening {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      .ending {
+        opacity: 0;
+      }
+
+      .video-container{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Tuzya Teddyk ek vicharucha ha &#128064;</p>
+    <button class="No">Ignore</button>
+    <button class="Yes">Open</button>
+    <video class="video-container" muted autoplay loop>
+      <source src="Images/lv_0_20240630112224.mp4" type="video/mp4" />
+    </video>
+    <script src="Question.js"></script>
+  </body>
+</html>
