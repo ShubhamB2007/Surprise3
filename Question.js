@@ -14,31 +14,34 @@ document.addEventListener("DOMContentLoaded" , ()=>{
     }, 100);
 })
 
-let video = document.querySelector("video")
-
-video.pause()
-
-let open = document.querySelector(".Yes")
-
-open.addEventListener("click" , startVideo);
-open.addEventListener("touchstart", startVideo);
+Yes.addEventListener("click", startVideo);
 
 function startVideo(){
-    let No = document.querySelector(".No")
-    let Yes = document.querySelector(".Yes")
-    let text = document.querySelector("p")
+let video = document.createElement("video");
+video.className = "video-container"
+video.setAttribute("autoplay" , " ");
 
-    if(video.paused){
-        video.play()
-    }
-    else{
-        video.pause()
-    }
+let source = document.createElement("source")
+source.src = "lv_0_20240630112224.mp4";
+ source.type = "video/mp4";
+
+ video.appendChild(source);
+ document.body.appendChild(video)
+
+ setTimeout(() => {
+    video.play()   
+ },2000);
  
-    setTimeout(() => {
-        No.classList.add("ending")
-        Yes.classList.add("ending")
-        text.classList.add("ending")
-    }, 100);
-    
+
+ let No = document.querySelector(".No")
+let Yes = document.querySelector(".Yes")
+let text = document.querySelector("p")
+
+
+ setTimeout(() => {
+    No.classList.add("ending");
+    Yes.classList.add("ending");
+    text.classList.add("ending");
+  }, 100);
 }
+ 
